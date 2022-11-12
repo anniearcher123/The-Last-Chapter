@@ -1,18 +1,23 @@
 import { ActionTypes } from "../constants/action-types";
 
 const initialState = {
-    books: [
-        {
-        id: 1,
-        title: "A Court of Thorns and Roses",
-        category: "Fantasy"
-        },
-    ]
-}
+    fantasyBooks: [],
+    mysteryBooks: [],
+    horrorBooks: [],
+    yaBooks: [],
+    bioBooks: []
+};
 export const bookReducer = (state = initialState, {type, payload}) => {
     switch(type) {
         case ActionTypes.SET_BOOKS:
-            return state;
+            return {
+                ...state, 
+                fantasyBooks: payload,
+                mysteryBooks: payload,
+                horrorBooks: payload,
+                yaBooks: payload,
+                bioBooks: payload
+            };
         default: 
             return state;
     }
