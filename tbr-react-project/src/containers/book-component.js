@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Modal from 'react-bootstrap/Modal';
+import { Link } from 'react-router-dom';
 
 const BookComponent = () => {
     var settings = {
@@ -42,49 +44,108 @@ const BookComponent = () => {
     const fantasyBooks = useSelector((state) => state.allBooks.fantasyBooks);
     const mysteryBooks = useSelector((state) => state.allBooks.mysteryBooks);
     const romanceBooks = useSelector((state) => state.allBooks.romanceBooks);
-    const youngAdultBooks = useSelector((state) => state.allBooks.youngAdultBooks);
-    const biographyBooks = useSelector((state) => state.allBooks.biographyBooks);
+    const youngAdultBooks = useSelector((state) => state.allBooks.yaBooks);
+    const biographyBooks = useSelector((state) => state.allBooks.bioBooks);
 
     
     return <div>
             <Slider {...settings}>
             {fantasyBooks.map((book) => {
-        console.log("Test:", book)
         return(
-        <div>
+        <div className="slider">
+            <Link to={`/book/${book.id}`}>
             <div className="card">
-                <img className="card-img-top" src={book.volumeInfo.imageLinks.thumbnail} alt="Card image cap"/>
+                <img className="card-img-top" id="card-image"src={book.volumeInfo.imageLinks?.smallThumbnail} alt="Card image cap"/>
                 <div className="card-body">
                     <h5 className="card-title">{book.volumeInfo.title}</h5>
                     <p className="card-name">{book.volumeInfo.authors}</p>
-                    <p className="card-text">{book.volumeInfo.description}</p>
-                    <a href="#" className="btn btn-primary">More Info</a>
+                    {/* <p className="card-text scroll"></p> */}
+                    {/* <a href="#" className="btn btn-primary">More Info</a> */}
                 </div>
             </div>
+            </Link>
+        </div>
+        );
+    })}
+</Slider>
+            <Slider {...settings}>
+            {mysteryBooks.map((book) => {
+        return(
+        <div className="slider">
+            <Link to={`/book/${book.id}`}>
+            <div className="card">
+                <img className="card-img-top" id="card-image"src={book.volumeInfo.imageLinks?.smallThumbnail} alt="Card image cap"/>
+                <div className="card-body">
+                    <h5 className="card-title">{book.volumeInfo.title}</h5>
+                    <p className="card-name">{book.volumeInfo.authors}</p>
+                    {/* <p className="card-text scroll"></p> */}
+                    {/* <a href="#" className="btn btn-primary">More Info</a> */}
+                </div>
+            </div>
+            </Link>
         </div>
         );
     })}
 </Slider>
 <Slider {...settings}>
-            {mysteryBooks.map((book) => {
-        console.log("Test:", book)
+            {romanceBooks.map((book) => {
         return(
-        <div>
+        <div className="slider">
+            <Link to={`/book/${book.id}`}>
             <div className="card">
-                <img className="card-img-top" src={book.volumeInfo.imageLinks.thumbnail} alt="Card image cap"/>
+                <img className="card-img-top" id="card-image"src={book.volumeInfo.imageLinks?.smallThumbnail} alt="Card image cap"/>
                 <div className="card-body">
                     <h5 className="card-title">{book.volumeInfo.title}</h5>
                     <p className="card-name">{book.volumeInfo.authors}</p>
-                    <p className="card-text">{book.volumeInfo.description}</p>
-                    <a href="#" className="btn btn-primary">More Info</a>
+                    {/* <p className="card-text scroll"></p> */}
+                    {/* <a href="#" className="btn btn-primary">More Info</a> */}
                 </div>
             </div>
+            </Link>
         </div>
         );
     })}
 </Slider>
+<Slider {...settings}>
+        {youngAdultBooks.map((book) => {
+                return(
+                <div className="slider">
+                    <Link to={`/book/${book.id}`}>
+                    <div className="card">
+                        <img className="card-img-top" id="card-image"src={book.volumeInfo.imageLinks?.smallThumbnail} alt="Card image cap"/>
+                        <div className="card-body">
+                            <h5 className="card-title">{book.volumeInfo.title}</h5>
+                            <p className="card-name">{book.volumeInfo.authors}</p>
+                            {/* <p className="card-text scroll"></p> */}
+                            {/* <a href="#" className="btn btn-primary">More Info</a> */}
+                        </div>
+                    </div>
+                    </Link>
+                </div>
+                );
+            })}
+</Slider> 
+<Slider {...settings}>
+        {biographyBooks.map((book) => {
+                return(
+                <div className="slider">
+                    <Link to={`/book/${book.id}`}>
+                    <div className="card">
+                        <img className="card-img-top" id="card-image"src={book.volumeInfo.imageLinks?.smallThumbnail} alt="Card image cap"/>
+                        <div className="card-body">
+                            <h5 className="card-title">{book.volumeInfo.title}</h5>
+                            <p className="card-name">{book.volumeInfo.authors}</p>
+                            {/* <p className="card-text scroll"></p> */}
+                            {/* <a href="#" className="btn btn-primary">More Info</a> */}
+                        </div>
+                    </div>
+                    </Link>
+                </div>
+                );
+            })}
+</Slider>
 </div>
-
 }
+
 
 export default BookComponent;
