@@ -6,6 +6,7 @@ import BookDetails from './containers/book-details';
 import React, { useEffect, useCallback, } from 'react';
 import TbrComponent from './containers/tbr-component';
 import Footer from './containers/footer-component';
+import SearchComponent from './containers/search-component';
 
 function App() {
   console.log("app start")
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" exact element={<BookListing/>} />
           <Route path="/book/:bookId" exact element={<BookDetails/>} />
           <Route path="/tbr" exact element={<TbrComponent/>} />
+          <Route path="/discover" exact element={<SearchComponent/>} />
           <Route>404 Not Found</Route>
         </Routes>
         <Footer />

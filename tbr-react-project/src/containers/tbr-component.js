@@ -1,9 +1,18 @@
 import React from 'react';
 import Header from './header';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeBooks } from '../redux/actions/bookActions';
+
 
 const TbrList = () => {
     const tbrList = useSelector((state) => state.tbrBooks.tbrList);
+    const dispatch = useDispatch();
+
+    const RemoveFromTbr = (book) => {
+        dispatch(removeBooks(book));
+        console.log("removed:", tbrList)
+        }
+
     return <div>
             <h1>My TBR</h1>
             <br />
@@ -24,7 +33,7 @@ const TbrList = () => {
                                 <h5 className="card-title">{book.volumeInfo.title}</h5>
                                 <p className="card-text"><small className="text-muted">{book.volumeInfo.authors}</small></p>
                                 <p className="card-text">{book.volumeInfo.description}</p>
-                                <button>Remove from TBR</button>
+                                <button type="button" onClick={() => RemoveFromTbr(book)} class="btn btn-dark">Remove from TBR</button>
                             </div>
                             </div>
                         </div>

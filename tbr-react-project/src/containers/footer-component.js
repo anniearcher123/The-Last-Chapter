@@ -4,6 +4,7 @@ const Footer = () => {
     return(
         <div className="container-fluid" id="footer">
             <div className="row">
+                    <hr />
                 <div className="col-4">
                     <h2>Useful Links</h2>
                     <ul className="footer-list">
@@ -34,9 +35,9 @@ const Footer = () => {
                 <div className="col-4" >
                     <h2>Follow Us</h2>
                 <ul className="social-list">
-                    <li><a href="#" class="fa fa-facebook"></a></li>
-                    <li><a href="#" class="fa fa-twitter"></a></li>
-                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#" className="fa fa-facebook"></a></li>
+                    <li><a href="#" className="fa fa-twitter"></a></li>
+                    <li><a href="#" className="fa fa-instagram"></a></li>
                 </ul>
                 </div>
             </div>

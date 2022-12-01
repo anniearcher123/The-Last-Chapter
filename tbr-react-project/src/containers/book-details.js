@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectedBooks, addBooks, removeBooks  } from "../redux/actions/bookActions";
+import { selectedBooks, addBooks } from "../redux/actions/bookActions";
 import Button from 'react-bootstrap/Button';
 
 

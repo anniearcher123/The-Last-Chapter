@@ -49,6 +49,9 @@ const BookComponent = () => {
 
     
     return <div>
+        <h1>Books by Top 5 Genres</h1>
+        <div className="slider-container">
+        <h3>Fantasy:</h3>
             <Slider {...settings}>
             {fantasyBooks.map((book) => {
         return(
@@ -68,6 +71,8 @@ const BookComponent = () => {
         );
     })}
 </Slider>
+    </div>
+    <h3>Mystery:</h3>
             <Slider {...settings}>
             {mysteryBooks.map((book) => {
         return(
@@ -87,6 +92,7 @@ const BookComponent = () => {
         );
     })}
 </Slider>
+<h3>Romance:</h3>
 <Slider {...settings}>
             {romanceBooks.map((book) => {
         return(
@@ -106,6 +112,7 @@ const BookComponent = () => {
         );
     })}
 </Slider>
+<h3>YA:</h3>
 <Slider {...settings}>
         {youngAdultBooks.map((book) => {
                 return(
@@ -125,6 +132,7 @@ const BookComponent = () => {
                 );
             })}
 </Slider> 
+<h3>Biographies: </h3>
 <Slider {...settings}>
         {biographyBooks.map((book) => {
                 return(
