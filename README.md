@@ -1,4 +1,4 @@
-The Last Chapter
+#The Last Chapter
 ## Table of contents
 * [General Info](#general-info)
 * [Tech Stack](#tech-stack)
