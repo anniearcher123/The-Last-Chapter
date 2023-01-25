@@ -26,7 +26,7 @@ function App() {
           <Route path="/" exact element={<BookListing/>} />
           <Route path="/book/:bookId" exact element={<BookDetails/>} />
           <Route path="/tbr" exact element={<TbrComponent/>} />
-          <Route path="/discover" exact element={<SearchComponent/>} />
+          {/* <Route path="/discover" exact element={<SearchComponent/>} /> */}
           <Route>404 Not Found</Route>
         </Routes>
         <Footer />
