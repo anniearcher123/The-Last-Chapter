@@ -91,7 +91,10 @@ max-width: 80%;
 margin: 10px;
 }
 
-
+.card-text {
+  max-height: 100px;
+  overflow-y: scroll;
+}
 
 .lead {
   font-family: 'Inconsolata', monospace;
@@ -271,6 +274,7 @@ margin: 10px;
 
 .card {
   width: 18rem;
+  overflow-x: scroll;
 }
 
 
@@ -282,3 +286,4 @@ margin: 10px;
     transform: rotate(360deg);
   }
 }
+

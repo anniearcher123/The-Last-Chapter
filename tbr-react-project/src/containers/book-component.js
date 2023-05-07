@@ -15,32 +15,32 @@ const BookComponent = () => {
         slidesToScroll: 4,
         initialSlide: 0,
         responsive: [
-          {
+            {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
             }
-          },
-          {
+            },
+            {
             breakpoint: 600,
             settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
             }
-          },
-          {
+            },
+            {
             breakpoint: 480,
             settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
+                slidesToShow: 1,
+                slidesToScroll: 1
             }
-          }
+            }
         ]
-      };
+        };
     const fantasyBooks = useSelector((state) => state.allBooks.fantasyBooks);
     const mysteryBooks = useSelector((state) => state.allBooks.mysteryBooks);
     const romanceBooks = useSelector((state) => state.allBooks.romanceBooks);
@@ -57,13 +57,12 @@ const BookComponent = () => {
         return(
         <div className="slider">
             <Link to={`/book/${book.id}`}>
-            <div className="card">
-                <img className="card-img-top" id="card-image"src={book.volumeInfo.imageLinks?.smallThumbnail} alt="Card image cap"/>
+            <div className="card d-flex justify-content-center" style={{ height: "350px", width: "300px" }}>
+                <br />
+                <img className="img-fluid rounded-start m-auto d-flex" src={book.volumeInfo.imageLinks?.smallThumbnail} alt="..." style={{ height: "200px", width: "150px" }}/>
                 <div className="card-body">
                     <h5 className="card-title">{book.volumeInfo.title}</h5>
                     <p className="card-name">{book.volumeInfo.authors}</p>
-                    {/* <p className="card-text scroll"></p> */}
-                    {/* <a href="#" className="btn btn-primary">More Info</a> */}
                 </div>
             </div>
             </Link>
@@ -78,13 +77,12 @@ const BookComponent = () => {
         return(
         <div className="slider">
             <Link to={`/book/${book.id}`}>
-            <div className="card">
-                <img className="card-img-top" id="card-image"src={book.volumeInfo.imageLinks?.smallThumbnail} alt="Card image cap"/>
+            <div className="card d-flex justify-content-center" style={{ height: "350px", width: "300px" }}>
+                <br />
+                <img className="img-fluid rounded-start m-auto d-flex" src={book.volumeInfo.imageLinks?.smallThumbnail} alt="..." style={{ height: "200px", width: "150px" }}/>
                 <div className="card-body">
                     <h5 className="card-title">{book.volumeInfo.title}</h5>
                     <p className="card-name">{book.volumeInfo.authors}</p>
-                    {/* <p className="card-text scroll"></p> */}
-                    {/* <a href="#" className="btn btn-primary">More Info</a> */}
                 </div>
             </div>
             </Link>
@@ -98,13 +96,12 @@ const BookComponent = () => {
         return(
         <div className="slider">
             <Link to={`/book/${book.id}`}>
-            <div className="card">
-                <img className="card-img-top" id="card-image"src={book.volumeInfo.imageLinks?.smallThumbnail} alt="Card image cap"/>
+            <div className="card d-flex justify-content-center" style={{ height: "350px", width: "300px" }}>
+                <br />
+                <img className="img-fluid rounded-start m-auto d-flex" src={book.volumeInfo.imageLinks?.smallThumbnail} alt="..." style={{ height: "200px", width: "150px" }}/>
                 <div className="card-body">
                     <h5 className="card-title">{book.volumeInfo.title}</h5>
                     <p className="card-name">{book.volumeInfo.authors}</p>
-                    {/* <p className="card-text scroll"></p> */}
-                    {/* <a href="#" className="btn btn-primary">More Info</a> */}
                 </div>
             </div>
             </Link>
@@ -118,13 +115,12 @@ const BookComponent = () => {
                 return(
                 <div className="slider">
                     <Link to={`/book/${book.id}`}>
-                    <div className="card">
-                        <img className="card-img-top" id="card-image"src={book.volumeInfo.imageLinks?.smallThumbnail} alt="Card image cap"/>
+                    <div className="card d-flex justify-content-center" style={{ height: "350px", width: "300px" }}>
+                        <br />
+                        <img className="img-fluid rounded-start m-auto d-flex" src={book.volumeInfo.imageLinks?.smallThumbnail} alt="..." style={{ height: "200px", width: "150px" }}/>
                         <div className="card-body">
                             <h5 className="card-title">{book.volumeInfo.title}</h5>
                             <p className="card-name">{book.volumeInfo.authors}</p>
-                            {/* <p className="card-text scroll"></p> */}
-                            {/* <a href="#" className="btn btn-primary">More Info</a> */}
                         </div>
                     </div>
                     </Link>
@@ -138,13 +134,12 @@ const BookComponent = () => {
                 return(
                 <div className="slider">
                     <Link to={`/book/${book.id}`}>
-                    <div className="card">
-                        <img className="card-img-top" id="card-image"src={book.volumeInfo.imageLinks?.smallThumbnail} alt="Card image cap"/>
+                    <div className="card d-flex justify-content-center" style={{ height: "350px", width: "300px" }}>
+                        <br />
+                        <img className="img-fluid rounded-start m-auto d-flex" src={book.volumeInfo.imageLinks?.smallThumbnail} alt="..." style={{ height: "200px", width: "150px" }}/>
                         <div className="card-body">
                             <h5 className="card-title">{book.volumeInfo.title}</h5>
                             <p className="card-name">{book.volumeInfo.authors}</p>
-                            {/* <p className="card-text scroll"></p> */}
-                            {/* <a href="#" className="btn btn-primary">More Info</a> */}
                         </div>
                     </div>
                     </Link>
@@ -152,6 +147,7 @@ const BookComponent = () => {
                 );
             })}
 </Slider>
+<br />
 </div>
 }
 
