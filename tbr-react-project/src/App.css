@@ -56,6 +56,7 @@ p {
 
 h2 {
   font-size: xx-large;
+  font-family: 'Playfair Display', serif;
   font-weight: 600;
   position: relative;
 }
@@ -117,10 +118,10 @@ margin: 10px;
   background-image: url("./images/search-bar.jpeg");
   min-width: 99vw;
   border-radius: 25px;
-  margin: 5px;
-  padding: 5px;
-  margin-bottom: 15px;
-  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   font-family: 'Playfair Display', serif;
 }
 
@@ -171,7 +172,6 @@ margin: 10px;
 }
 
 .main-search-button{
-
       background: #4DB7FE;
 }
 
