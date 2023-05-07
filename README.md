@@ -7,11 +7,14 @@
 * [Setup](#setup)
 
 ## General Info
-As someone with a passion for reading, my vision for this website was for reader to have a colorful space to discover new books and create a TBR (To Be Read) list to keep track of what they have and have not read. This website utilizes the Google Books API to organize books by genre and provide a Google Review rating so the use can see how popular a book is.
+"The Last Chapter" is a dynamic web application that was created using HTML, CSS, Javascript, and React/Redux. The application features a home page with five sliders that represent the five most popular genres of books. When a user clicks on a book, they are taken to a separate page where they can access more information about the book.
+
+Additionally, users have the option to add the book to their To Be Read (TBR) list on the more info page. The application also includes a Discover page where users can search for books by title, author, subject, and more, and add them to their TBR list. Finally, users can scroll through their TBR list and delete books from the list as desired. "The Last Chapter" offers users an interactive and engaging way to discover, track, and organize their reading preferences.
 	
 ## Tech Stack
 Project is created with:
 * HTML/CSS
+* Javascript
 * React/Redux
 
 ## Minimum Viable Product
