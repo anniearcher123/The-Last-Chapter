@@ -35,22 +35,6 @@ const BookDetails = () => {
     console.log("added", tbrList)
     }
 
-    // const fetchBookDetail = async () => {
-    //     const response = await axios.get(`https://www.googleapis.com/books/v1/volumes/${bookId}?key=AIzaSyCHMP32kETXlytY8KQCvIq6OvIy4BP2k90`)
-    //     .catch(err => {
-    //         console.log("err", err);
-    //     });
-    //     dispatch(selectedBooks(response.data));
-    //     console.log(response.data);
-    // };
-
-    // useEffect(() => {
-    //     console.log("ID", bookId)
-    //     if(bookId && bookId !== "") fetchBookDetail();
-    //     console.log("Book:", book);
-    // }, [bookId])
-
-
     return(
         <div className="container">
             <div className="">
