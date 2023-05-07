@@ -56,3 +56,10 @@ export const removeBooks = (book) => {
         payload: book,
     };
 };
+
+export const setSearchInfo = (book) => {
+    return {
+        type: ActionTypes.SET_SEARCH_INFO,
+        payload: book,
+    }
+}

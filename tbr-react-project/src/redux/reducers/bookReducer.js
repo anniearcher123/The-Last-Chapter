@@ -18,7 +18,8 @@ export const bookReducer = (state, {type, payload}) => {
     romanceBooks: [],
     yaBooks: [],
     bioBooks: [],
-    tbrList: []
+    tbrList: [], 
+    searchList: []
         }
     }
     
@@ -48,6 +49,11 @@ export const bookReducer = (state, {type, payload}) => {
                 ...state, 
                 bioBooks: payload,
             };
+        case ActionTypes.SET_SEARCH_INFO:
+            return {
+                ...state, 
+                searchInfo: payload,
+            }
         default: 
             return state;
     }
@@ -61,7 +67,8 @@ export const selectedBookReducer = (state, {type, payload}) => {
     romanceBooks: [],
     yaBooks: [],
     bioBooks: [],
-    tbrList: []
+    tbrList: [],
+    searchList: []
         }
     }
     switch(type) {
@@ -80,7 +87,8 @@ export const tbrListReducer = (state, {type, payload}) => {
     romanceBooks: [],
     yaBooks: [],
     bioBooks: [],
-    tbrList: []
+    tbrList: [],
+    searchList: []
         }
     }
     switch(type) {
